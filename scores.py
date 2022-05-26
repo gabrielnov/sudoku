@@ -11,7 +11,7 @@ def write_file(content, file_name):
 
 def register(game):
     
-    file_name = "scores_" + game.level.replace("\n","") + ".txt"
+    file_name = "./scores/scores_" + game.level.replace("\n","") + ".txt"
     f = open(file_name, "r")
     content = f.readlines()
     f.close()
@@ -61,7 +61,7 @@ def read():
     games = []
 
     for s in scores:
-        file_name = "scores_" + s + ".txt"
+        file_name = "./scores/scores_" + s + ".txt"
         f = open(file_name, "r")
 
         content = f.readlines()
